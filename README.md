@@ -1,33 +1,8 @@
 <h1 align="center">e-Shop Website</h1>
 
-<p align="center">  
-<a href="http://www.linkedin.com/in/valentine-fernandes-75701622b">
-       <img alt="Valentine Fernandes" src="https://img.shields.io/badge/-ValentineFernandes-FF6347?style=flat&logo=Linkedin&logoColor=white" />
-   </a>
-  <a href="https://github.com/ValentineFernandes/eShop-Website/blob/main/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/ValentineFernandes/eShop-Website?color=red" target="_blank" />
-  </a>
-  <img alt="GitHub Forks" src="https://img.shields.io/github/forks/ValentineFernandes/eShop-Website?color=red" />
-  <img alt="Stars" src="https://img.shields.io/github/stars/ValentineFernandes/eShop-Website?color=red" />
-  <img alt="Repo size" src="https://img.shields.io/github/repo-size/ValentineFernandes/eShop-Website?color=red" />
-<img alt= "Watchers" src="https://img.shields.io/github/watchers/ValentineFernandes/eShop-Website?color=red" />
-<img alt= "Last commit" src="https://img.shields.io/github/last-commit/ValentineFernandes/eShop-Website?color=red" />
-</p>
-
-
 > e-Shop is an e-commerce website where you can shop for items online.
 
-
 > It's a Maven-based project.
-
-
-<div align="center">
-<sub>This e-Shop website is created by
-<a href="https://github.com/ValentineFernandes">Valentine Fernandes
-</a>
-</sub>
-</div>
-
 
 <h1 align="center">Home Page (index.jsp)</h1>
 <img src="https://github.com/ValentineFernandes/ValentineFernandes/blob/main/Portfolio/eshop1.jpg">
@@ -82,9 +57,6 @@
 # 👷 How to run
 
 ✅ Download and install MySQL database, Eclipse IDE, Apache Tomcat server, MySQL JDBC Driver.<br>
-✅ Open http://localhost:8080/shopping-cart/index.jsp with your browser to see the result.<br>
+✅ Open http://localhost:8080/dam2_m06_uf4_JSP/index.jsp with your browser to see the result.<br>
 ✅ Note:- The above link will only work when this project is connected with Apache Tomcat server.
 
-# 📕 License
-
-This project is under <a href="https://github.com/ValentineFernandes/eShop-Website/blob/main/LICENSE">MIT</a> license.
