@@ -1,3 +1,4 @@
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<div class="container">
 		<a class="navbar-brand" href="index.jsp">Shopping Cart</a>
@@ -21,6 +22,7 @@
 				} else {
 				%>
 				<li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
+				<li class="fa fa-user-circle" style="font-size:30px"></li>
 				<%
 				}
 				%>
