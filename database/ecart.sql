@@ -1,3 +1,4 @@
+create schema ecartdb; 
 use ecartdb;
 -- Table structure for table `orders`
 DROP TABLE IF EXISTS `orders`;
