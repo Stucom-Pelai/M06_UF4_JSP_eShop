@@ -15,7 +15,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import val.shop.connection.DbCon;
+import val.shop.connection.ConnectionDB;
 import val.shop.dao.OrderDao;
 import val.shop.model.*;
 
@@ -40,7 +40,7 @@ public class CheckOutServlet extends HttpServlet {
 					order.setQunatity(c.getQuantity());
 					order.setDate(formatter.format(date));
 					
-					OrderDao oDao = new OrderDao(DbCon.getConnection());
+					OrderDao oDao = new OrderDao(ConnectionDB.getConnection());
 					boolean result = oDao.insertOrder(order);
 					if(!result) break;
 				}

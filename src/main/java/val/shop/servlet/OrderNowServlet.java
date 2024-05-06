@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import val.shop.connection.DbCon;
+import val.shop.connection.ConnectionDB;
 import val.shop.dao.*;
 import val.shop.model.*;
 
@@ -43,7 +43,7 @@ public class OrderNowServlet extends HttpServlet {
                 orderModel.setQunatity(productQuantity);
                 orderModel.setDate(formatter.format(date));
 
-                OrderDao orderDao = new OrderDao(DbCon.getConnection());
+                OrderDao orderDao = new OrderDao(ConnectionDB.getConnection());
                 boolean result = orderDao.insertOrder(orderModel);
                 if (result) {
                     ArrayList<Cart> cart_list = (ArrayList<Cart>) request.getSession().getAttribute("cart-list");

@@ -1,4 +1,4 @@
-<%@page import="val.shop.connection.DbCon"%>
+<%@page import="val.shop.connection.ConnectionDB"%>
 <%@page import="val.shop.dao.ProductDao"%>
 <%@page import="val.shop.model.*"%>
 <%@page import="java.util.*"%>
@@ -10,7 +10,7 @@ User auth = (User) request.getSession().getAttribute("auth");
 if (auth != null) {
     request.setAttribute("person", auth);
 }
-ProductDao pd = new ProductDao(DbCon.getConnection());
+ProductDao pd = new ProductDao(ConnectionDB.getConnection());
 List<Product> products = pd.getAllProducts();
 ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
 if (cart_list != null) {
@@ -33,6 +33,7 @@ if (cart_list != null) {
 			if (!products.isEmpty()) {
 				for (Product p : products) {
 			%>
+			
 			<div class="col-md-3 my-3">
 				<div class="card w-100">
 					<img class="card-img-top" src="product-image/<%=p.getImage() %>"

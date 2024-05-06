@@ -1,6 +1,6 @@
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="val.shop.dao.OrderDao"%>
-<%@page import="val.shop.connection.DbCon"%>
+<%@page import="val.shop.connection.ConnectionDB"%>
 <%@page import="val.shop.dao.ProductDao"%>
 <%@page import="val.shop.model.*"%>
 <%@page import="java.util.*"%>
@@ -8,21 +8,20 @@
 	pageEncoding="ISO-8859-1"%>
 	<%
 	DecimalFormat dcf = new DecimalFormat("#.##");
-	request.setAttribute("dcf", dcf);
-	User auth = (User) request.getSession().getAttribute("auth");
-	List<Order> orders = null;
-	if (auth != null) {
-	    request.setAttribute("person", auth);
-	    OrderDao orderDao  = new OrderDao(DbCon.getConnection());
-		orders = orderDao.userOrders(auth.getId());
-	}else{
-		response.sendRedirect("login.jsp");
-	}
-	ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
-	if (cart_list != null) {
-		request.setAttribute("cart_list", cart_list);
-	}
-	
+		request.setAttribute("dcf", dcf);
+		User auth = (User) request.getSession().getAttribute("auth");
+		List<Order> orders = null;
+		if (auth != null) {
+		    request.setAttribute("person", auth);
+		    OrderDao orderDao  = new OrderDao(ConnectionDB.getConnection());
+			orders = orderDao.userOrders(auth.getId());
+		}else{
+			response.sendRedirect("login.jsp");
+		}
+		ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
+		if (cart_list != null) {
+			request.setAttribute("cart_list", cart_list);
+		}
 	%>
 <!DOCTYPE html>
 <html>

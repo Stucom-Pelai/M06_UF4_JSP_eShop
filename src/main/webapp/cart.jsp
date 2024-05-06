@@ -1,4 +1,4 @@
-<%@page import="val.shop.connection.DbCon"%>
+<%@page import="val.shop.connection.ConnectionDB"%>
 <%@page import="val.shop.dao.ProductDao"%>
 <%@page import="val.shop.model.*"%>
 <%@page import="java.util.*"%>
@@ -15,7 +15,7 @@ if (auth != null) {
 ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
 List<Cart> cartProduct = null;
 if (cart_list != null) {
-	ProductDao pDao = new ProductDao(DbCon.getConnection());
+	ProductDao pDao = new ProductDao(ConnectionDB.getConnection());
 	cartProduct = pDao.getCartProducts(cart_list);
 	double total = pDao.getTotalCartPrice(cart_list);
 	request.setAttribute("total", total);
@@ -67,7 +67,7 @@ font-size: 25px;
 				<tr>
 					<td><%=c.getName()%></td>
 					<td><%=c.getCategory()%></td>
-					<td><%= dcf.format(c.getPrice())%></td>
+					<td><%=dcf.format(c.getPrice())%></td>
 					<td>
 						<form action="order-now" method="post" class="form-inline">
 						<input type="hidden" name="id" value="<%= c.getId()%>" class="form-input">

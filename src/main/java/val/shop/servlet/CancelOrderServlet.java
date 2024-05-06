@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import val.shop.connection.DbCon;
+import val.shop.connection.ConnectionDB;
 import val.shop.dao.OrderDao;
 
 @WebServlet("/cancel-order")
@@ -24,7 +24,7 @@ public class CancelOrderServlet extends HttpServlet {
 		try(PrintWriter out = response.getWriter()) {
 			String id = request.getParameter("id");
 			if(id != null) {
-				OrderDao orderDao = new OrderDao(DbCon.getConnection());
+				OrderDao orderDao = new OrderDao(ConnectionDB.getConnection());
 				orderDao.cancelOrder(Integer.parseInt(id));
 			}
 			response.sendRedirect("orders.jsp");
