@@ -55,7 +55,7 @@ font-size: 25px;
 					<th scope="col">Name</th>
 					<th scope="col">Category</th>
 					<th scope="col">Price</th>
-					<th scope="col">Buy Now</th>
+					<th scope="col">Quantity</th>
 					<th scope="col">Cancel</th>
 				</tr>
 			</thead>
