@@ -41,3 +41,4 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 INSERT INTO `users` VALUES (1,'test','test@gmail.com','123');
+INSERT INTO `users` VALUES (2,'carlos','carlos@gmail.com','123');
