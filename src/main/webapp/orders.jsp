@@ -22,6 +22,13 @@
 		if (cart_list != null) {
 			request.setAttribute("cart_list", cart_list);
 		}
+		
+		
+		double total = 0;
+		for(Order or : orders){
+			total = total + or.getPrice();
+		}
+		
 	%>
 <!DOCTYPE html>
 <html>
@@ -57,10 +64,14 @@
 						<td><%=dcf.format(o.getPrice()) %></td>
 						<td><a class="btn btn-sm btn-danger" href="cancel-order?id=<%=o.getOrderId()%>">Cancel Order</a></td>
 					</tr>
+					
 				<%}
 			}
 			%>
-			
+			<tr>
+					<td>Total</td>
+					<td colspan = 5> Total Price: <%= total %></td>
+				</tr>
 			</tbody>
 		</table>
 	</div>

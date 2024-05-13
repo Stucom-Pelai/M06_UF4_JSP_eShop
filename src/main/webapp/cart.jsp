@@ -81,9 +81,11 @@ font-size: 25px;
 					</td>
 					<td><a href="remove-from-cart?id=<%=c.getId() %>" class="btn btn-sm btn-danger">Remove</a></td>
 				</tr>
+				
 
 				<%
 				}}%>
+				
 			</tbody>
 		</table>
 	</div>
