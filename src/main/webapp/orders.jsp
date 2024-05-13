@@ -62,7 +62,7 @@ if (cart_list != null) {
 					<td><%=o.getName()%></td>
 					<td><%=o.getCategory()%></td>
 					<td><%=o.getQunatity()%></td>
-					<td><%=dcf.format(o.getPrice())%></td>
+					<td><%=dcf.format(o.getPrice())%> $</td>
 					<td>
 						<%
 						if (yearsBetween < 1) {

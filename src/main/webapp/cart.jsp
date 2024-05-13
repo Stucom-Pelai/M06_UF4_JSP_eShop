@@ -72,7 +72,7 @@ font-size: 25px;
 				<tr>
 					<td><%=c.getName()%></td>
 					<td><%=c.getCategory()%></td>
-					<td><%=dcf.format(c.getPrice())%></td>
+					<td><%=dcf.format(c.getPrice())%> $</td>
 					<td>
 						<form action="order-now" method="post" class="form-inline">
 						<input type="hidden" name="id" value="<%= c.getId()%>" class="form-input">
