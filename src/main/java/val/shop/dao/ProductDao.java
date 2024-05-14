@@ -37,6 +37,8 @@ public class ProductDao {
                 row.setImage(rs.getString("image"));
 
                 book.add(row);
+                
+               System.out.println(row.toString());
             }
 
         } catch (SQLException e) {
