@@ -28,7 +28,7 @@ public class OrderDao {
 			pst = this.con.prepareStatement(query);
 			pst.setInt(1, model.getId());
 			pst.setInt(2, model.getUid());
-			pst.setInt(3, model.getQunatity());
+			pst.setInt(3, model.getQuantity());
 			pst.setString(4, model.getDate());
 			pst.executeUpdate();
 			result = true;
