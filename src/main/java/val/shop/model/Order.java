@@ -42,7 +42,7 @@ public class Order extends Product{
 	public int getQuantity() {
 		return quantity;
 	}
-	public void setQunatity(int quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 	public String getDate() {

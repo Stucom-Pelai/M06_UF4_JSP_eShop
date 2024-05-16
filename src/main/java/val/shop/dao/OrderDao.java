@@ -55,7 +55,7 @@ public class OrderDao {
 				order.setName(product.getName());
 				order.setCategory(product.getCategory());
 				order.setPrice(product.getPrice() * rs.getInt("o_quantity"));
-				order.setQunatity(rs.getInt("o_quantity"));
+				order.setQuantity(rs.getInt("o_quantity"));
 				order.setDate(rs.getString("o_date"));
 				list.add(order);
 			}
