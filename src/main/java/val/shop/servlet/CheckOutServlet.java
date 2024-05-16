@@ -32,7 +32,7 @@ public class CheckOutServlet extends HttpServlet {
             Date date = new Date();
 			ArrayList<Cart> cart_list = (ArrayList<Cart>) request.getSession().getAttribute("cart-list");
 			User auth = (User) request.getSession().getAttribute("auth");
-			if(cart_list != null && auth!=null) {
+			if(cart_list != null && auth!=null) {//Aquí está el quit del issue 2
 				for(Cart c:cart_list) {
 					Order order = new Order();
 					order.setId(c.getId());
@@ -47,13 +47,26 @@ public class CheckOutServlet extends HttpServlet {
 				cart_list.clear();
 				response.sendRedirect("orders.jsp");
 			}else {
-				if(auth==null) {
-					response.sendRedirect("login.jsp");
+				try {
+					if(auth==null && cart_list == null) {
+						PrintWriter salida = response.getWriter();
+						salida.println("<html><body><p>hola</p></body></html>");
+						//response.sendRedirect("login.jsp");
+						
+					}else if (cart_list == null && auth != null) {
+						response.sendRedirect("cart.jsp");
+					}
+					//response.sendRedirect("cart.jsp");
+				}catch (IllegalStateException e) {
+					System.out.println("ieeeeellleee");
+					e.printStackTrace();
 				}
-				response.sendRedirect("cart.jsp");
+				
+				
+				
+				
 			}
 		} catch (ClassNotFoundException|SQLException e) {
-			
 			e.printStackTrace();
 		}
 	}
