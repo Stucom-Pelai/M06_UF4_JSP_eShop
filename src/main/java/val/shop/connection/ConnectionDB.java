@@ -19,7 +19,7 @@ public class ConnectionDB {
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		if (connection == null) {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecartdb", "root", "");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecartdb", "root", "neil0502");
 			System.out.print("connected");
 		}
 		return connection;
