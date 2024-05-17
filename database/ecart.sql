@@ -24,6 +24,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 -- Dumping data for table `products`
+
 INSERT INTO `products` VALUES (1,'New Arrival Femal Shoes','Female Shoes',120,'female-shoes.jpg'),
 (2,'Ladies Pure PU Shoulder Bag','Ladis Bag',69.99,'ladis-bag.jpg'),
 (3,'Stylish Men Office Suits','Men Clothes',169,'men-suits.jpg'),
@@ -31,6 +32,7 @@ INSERT INTO `products` VALUES (1,'New Arrival Femal Shoes','Female Shoes',120,'f
 (5,'FreeMax e-cigarettes VB-456','E-Cigarattes',310,'smoking-e-cigarette.jpg'),
 (6,'GeekVapee saf e-cigarattes MM-632','E-Cigarattes',555.5,'smoking-e-cigarette-2.jpg'), 
 (7,'Men stylish elegant shoes 908', 'Men Shoes', 52, 'men-shoes.jpg');
+
 
 -- Table structure for table `users`
 DROP TABLE IF EXISTS `users`;
@@ -47,3 +49,4 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 INSERT INTO `users` VALUES (1,'test','test@gmail.com','123');
+INSERT INTO `users` VALUES (2,'carlos','carlos@gmail.com','123');

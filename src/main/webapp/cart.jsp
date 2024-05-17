@@ -47,15 +47,20 @@ font-size: 25px;
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h3> 
-                        <a class="mx-3 btn btn-danger" href="cart-check-out">Check Out</a></div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h3>
+		<%if (cart_list != null && auth != null) {%>
+			<a class="mx-3 btn btn-danger" href="cart-check-out">Check out</a></div>
+		<%}else{%>
+			<div>Inicia sesión y añade una cart al menos</div></div><%
+		}%> 
+		<br>
 		<table class="table table-light" style='background-color:#FEE5E5;'>
 			<thead>
 				<tr>
 					<th scope="col">Name</th>
 					<th scope="col">Category</th>
 					<th scope="col">Price</th>
-					<th scope="col">Buy Now</th>
+					<th scope="col">Quantity</th>
 					<th scope="col">Cancel</th>
 				</tr>
 			</thead>
@@ -67,7 +72,7 @@ font-size: 25px;
 				<tr>
 					<td><%=c.getName()%></td>
 					<td><%=c.getCategory()%></td>
-					<td><%=dcf.format(c.getPrice())%></td>
+					<td><%=dcf.format(c.getPrice())%> $</td>
 					<td>
 						<form action="order-now" method="post" class="form-inline">
 						<input type="hidden" name="id" value="<%= c.getId()%>" class="form-input">
