@@ -52,7 +52,7 @@ if (cart_list != null) {
 			<%
 			}
 			} else {
-			out.println("There is no proucts");
+			out.println("There is no products");
 			}
 			%>
 
