@@ -49,36 +49,33 @@ if (cart_list != null) {
 				</tr>
 			</thead>
 			<tbody>
-
-				<%
-				if (orders != null) {
-					for (Order o : orders) {
-						LocalDate orderDate = LocalDate.parse(o.getDate(), formatter);
-						LocalDate now = LocalDate.now();
-						long yearsBetween = ChronoUnit.YEARS.between(orderDate, now);
-				%>
-				<tr>
-					<td><%=o.getDate()%></td>
-					<td><%=o.getName()%></td>
-					<td><%=o.getCategory()%></td>
-					<td><%=o.getQunatity()%></td>
-					<td><%=dcf.format(o.getPrice())%></td>
-					<td>
-						<%
-						if (yearsBetween < 1) {
-						%> <a class="btn btn-sm btn-danger"
-						href="cancel-order?id=<%=o.getOrderId()%>">Cancel Order</a> <%
- }
- %>
-					</td>
-				</tr>
-				<%
-				}
-				}
-				%>
-
+			
+			<%
+			if(orders != null){
+				for(Order o:orders){%>
+					<tr>
+						<td><%=o.getDate() %></td>
+						<td><%=o.getName() %></td>
+						<td><%=o.getCategory() %></td>
+						<td><%=o.getQunatity() %></td>
+						<td><%=dcf.format(o.getPrice()) %></td>
+						<td><a class="btn btn-sm btn-danger" href="cancel-order?id=<%=o.getOrderId()%>">Cancel Order</a></td>
+					</tr>
+				<%}
+			}
+			%>
+			
 			</tbody>
 		</table>
+		
+		<%
+		if(orders != null && !orders.isEmpty()) {
+			%>
+			<div style="color: green;">The product has been ordered successfully</div>
+			<%
+		}
+		%>
+		
 	</div>
 	<%@include file="/includes/footer.jsp"%>
 	<%@include file="/includes/html/foot.html"%>
