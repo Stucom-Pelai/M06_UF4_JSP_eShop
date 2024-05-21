@@ -6,7 +6,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%
-//Version 1
+//Version 2
 DecimalFormat dcf = new DecimalFormat("0.00");
 request.setAttribute("dcf", dcf);
 User auth = (User) request.getSession().getAttribute("auth");
