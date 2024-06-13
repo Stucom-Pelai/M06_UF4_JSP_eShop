@@ -67,6 +67,15 @@ if (cart_list != null) {
 			
 			</tbody>
 		</table>
+		
+		<%
+		if(orders != null && !orders.isEmpty()) {
+			%>
+			<div style="color: green;">The product has been ordered successfully</div>
+			<%
+		}
+		%>
+		
 	</div>
 	<%@include file="/includes/footer.jsp"%>
 	<%@include file="/includes/html/foot.html"%>
