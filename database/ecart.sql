@@ -31,7 +31,8 @@ INSERT INTO `products` VALUES (1,'New Arrival Femal Shoes','Female Shoes',120,'f
 (4,'Jaeger-LeCoultre Men Watch','Men Watch',2500.99,'men-watch.jpg'),
 (5,'FreeMax e-cigarettes VB-456','E-Cigarattes',310,'smoking-e-cigarette.jpg'),
 (6,'GeekVapee saf e-cigarattes MM-632','E-Cigarattes',555.5,'smoking-e-cigarette-2.jpg'), 
-(7,'Men stylish elegant shoes 908', 'Men Shoes', 52, 'men-shoes.jpg');
+(7,'Men stylish elegant shoes 908', 'Men Shoes', 52, 'men-shoes.jpg'),
+(8,'Saint Laurent Desk Agenda In Leather', 'Men Agenda', 13, 'agenda-men.jpg');
 
 
 -- Table structure for table `users`
