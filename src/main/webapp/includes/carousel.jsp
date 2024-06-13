@@ -6,23 +6,23 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="product-images/arrival.jpg" alt="Arrival">
+      <img class="d-block w-100" src="product-image/arrival.jpg" alt="Arrival">
       
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="product-images/mens.jpg" alt="Mens">
+      <img class="d-block w-100" src="product-image/mens.jpg" alt="Mens">
       
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="product-images/jeans.jpg" alt="Jeans">
+      <img class="d-block w-100" src="product-image/jeans.jpg" alt="Jeans">
       
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="product-images/menwatch.jpg" alt="Men Watch">
+      <img class="d-block w-100" src="product-image/menwatch.jpg" alt="Men Watch">
       
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="product-images/femalewatch.jpg" alt="Female Watch">
+      <img class="d-block w-100" src="product-image/femalewatch.jpg" alt="Female Watch">
       
     </div>
   </div>
