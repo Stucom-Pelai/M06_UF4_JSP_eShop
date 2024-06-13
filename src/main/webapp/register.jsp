@@ -23,9 +23,13 @@
 
     <div class="container">
         <div class="card w-50 mx-auto my-5">
-            <div class="card-header text-center bg-danger text-white">User Login</div>
+            <div class="card-header text-center bg-danger text-white">Register</div>
             <div class="card-body" style='background-color:#FFDCDC;'>
                 <form action="user-login" method="post">
+                <div class="form-group">
+                        <label>Full Name </label> 
+                        <input name="full-name" class="form-control" placeholder="Enter full name" style='background-color:#FFF6FA;'>
+                    </div>
                     <div class="form-group">
                         <label>Email </label> 
                         <input type="email" name="login-email" class="form-control" placeholder="Enter email" style='background-color:#FFF6FA;'>
@@ -35,12 +39,9 @@
                         <input type="password" name="login-password" class="form-control" placeholder="Enter password" style='background-color:#FFF6FA;'>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-danger">Login</button>
+                        <button type="submit" class="btn btn-danger">Submit	</button>
                     </div>
                 </form>
-                <div class="text-center mt-3">
-                    Don't have an account yet? <a href="register.jsp">Register</a>
-                </div>
             </div>
         </div>
     </div>
